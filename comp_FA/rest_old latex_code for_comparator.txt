@@ -1,0 +1,136 @@
+\newpage
+\subsection { 3-bit Comparator design }
+
+\begin{enumerate}
+  
+
+
+\item
+{A comparator which compare 2 binary numbers having 3-bits and produce the resultant of 3 outputs on the 
+basis of magnitude of given binary numbers is called 3-bit magnitude comparator. 3-input magnitude 
+comparator is more effective than the 2-input magnitude comparator while it is less effective than the 4-bit and 6-
+bit magnitude comparator. 3-bit magnitude comparator gives expression which is less complex than the 2-bit magnitude 
+while this expression is complex in the cases of 4-bit and 6-bit and so on.
+
+ \item {
+   Design has been done using the pass transistor logic. Pass transistor logic involves nmos or 
+pmos transistors to transfer the charge from one node of a circuit to another node under the 
+control of MOS gate voltage.
+ }
+ 
+\item {
+Circuit is first made using logic gates with the help of the Boolean logic 
+expressions and then implemented at the transistor level in the Magic 
+layout tool. The working of the circuit was verified in the IRSIM simulator. 
+Further, the functioning of the circuit is also verified using the NGSpice 
+circuit simulator by extracting the netlist from the MAGIC tool.
+
+
+}
+\end{enumerate}
+
+
+
+ 
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=15cm]{fig/3bitcomp_logic_gate.png}
+          \caption{3-bit comparator circuit diagram}
+    \label{fig:3-bit comparator circuit diagram}
+\end{figure} 
+
+
+     \begin{figure}[htp]
+    \centering
+    \includegraphics[width=17cm,height=8cm]{fig/3bit_comp_equ.png}
+          \caption{3-bit Comparator output equations using pass ransistor logic }
+    \label{fig:IRSIM waveform analyser}
+\end{figure}
+
+
+
+
+
+\newpage
+\subsection {Layout design of 3-bit Comparator }
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=15cm]{fig/3bit_magic_layout.png}
+          \caption{Layout of 3 bit comparator by Pass transistor logic using Magic tool}
+    \label{fig:Magic Layout of 3 bit comparator by Pass transistor logic}
+\end{figure} 
+
+
+
+
+
+\begin{enumerate}[label*=\arabic*.]
+  
+\newpage
+\subsection { Simulation \& result using IRSIM  }
+ 
+
+      \begin{figure}[htp]
+    \centering
+    \includegraphics[width=15cm,height=8cm]{fig/irsimanalysis.png}
+          \caption{Different input combinations given to IRSIM}
+    \label{fig: different input combinations given to IRSIM}
+\end{figure} 
+
+
+
+      \begin{figure}[htp]
+    \centering
+    \includegraphics[width=15cm,height=8cm]{fig/irsimanalysis2.png}
+          \caption{ Input combinations given to IRSIM}
+    \label{fig: different input combinations given to IRSIM}
+\end{figure} 
+
+
+    
+
+     \begin{figure}[htp]
+    \centering
+    \includegraphics[width=15cm,height=8cm]{fig/irsimanalysis_wf.png}
+          \caption{IRSIM waveform analyser}
+    \label{fig:IRSIM waveform analyser}
+\end{figure}
+
+
+\newpage
+\subsection { Simulation \& result using NGSPICE  }
+
+
+
+Netlist is extracted from Magic tool and simulated into NGSPICE to verify our layout.
+by applying input pulse. having width of pulse  
+a2 = 40ns; a1= 80ns; a0 = 160ns;
+b2=5ns; b1=10ns; b0=20ns
+
+
+
+
+
+
+     \begin{figure}[htp]
+    \centering
+    \includegraphics[width=15cm,height=8cm]{fig/ngspice_ip.png}
+          \caption{Inout waveform applied to NGSPICE }
+    \label{fig:IRSIM waveform analyser}
+\end{figure}
+
+     \begin{figure}[htp]
+    \centering
+    \includegraphics[width=15cm,height=8cm]{fig/ngspice_op.png}
+          \caption{Output  waveform of NGSPICE after Simulation }
+    \label{fig:IRSIM waveform analyser}
+\end{figure}
+
+
+
+
+\end{enumerate}
+
